@@ -61,7 +61,15 @@ public class AIController {
 //  ]
 //}'
 
-    SseEmitter sseEmitter;
+//    curl -X POST http://localhost:8080/ask \
+//            -H "Content-Type: application/json" \
+//            -d '{
+//            "question": "What is AI?",
+//            "sessionId": "12345"
+//}'
+
+
+SseEmitter sseEmitter;
 
     @PostMapping("/ask")
     public SseEmitter streamAsk(@org.springframework.web.bind.annotation.RequestBody QueryDTO queryDTO) throws Exception {
